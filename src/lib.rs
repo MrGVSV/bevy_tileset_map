@@ -57,6 +57,8 @@
 //! * __`serialization`__ - Enables tilemap serialization
 //!
 
+pub use bevy_tileset as tileset;
+
 #[cfg(feature = "auto-tile")]
 pub(crate) mod auto;
 mod placement;
