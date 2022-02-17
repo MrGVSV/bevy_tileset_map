@@ -36,7 +36,7 @@ impl Plugin for TilesetMapPlugin {
 				TilemapStage,
 				crate::auto::on_change_auto_tile
 					.label(TilesetMapLabel::UpdateAutoTiles)
-					.before(TilemapLabel::UpdateChunkVisibility),
+					.before(bevy_ecs_tilemap::TilemapLabel::UpdateChunkVisibility),
 			);
 	}
 }
