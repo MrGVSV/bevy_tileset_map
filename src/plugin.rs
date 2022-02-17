@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use bevy_ecs_tilemap::{TilemapLabel, TilemapStage};
+use bevy_ecs_tilemap::TilemapStage;
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash, StageLabel)]
 pub struct TilesetMapStage;

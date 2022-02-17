@@ -653,6 +653,7 @@ impl<'w, 's> TilePlacer<'w, 's> {
 	}
 
 	/// Get the `TileData` matching the given `TileId`
+	#[allow(dead_code)]
 	fn get_tile_data(&self, tile_id: &TileId) -> Result<&TileData, TilePlacementError> {
 		let tileset = self.get_tileset(&tile_id)?;
 		let (_, tile_data) = tileset
