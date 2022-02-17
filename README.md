@@ -100,6 +100,8 @@ example to see how we turn
 some [JSON](https://github.com/MrGVSV/bevy_tileset_map/blob/main/assets/map.json) into a full
 tilemap. Again, as long as you set everything up using tilesets, it should work pretty much as expected.
 
+> Note: This feature is very barebones and partially experimental. If things aren't working like you want, feel free to submit an issue or PR about it!
+
 ### 🏗 Placement/Removal
 
 <p align="center">
