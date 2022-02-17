@@ -1,6 +1,6 @@
 [package]
 name = "bevy_tileset_map"
-version = "0.4.0"
+version = "0.4.1"
 edition = "2021"
 authors = ["Gino Valente <gino.valente.code@gmail.com>"]
 description = "An extension to bevy_ecs_tilemap, allowing for configurable tilesets, auto tiling, and more using the bevy_tileset crate"
