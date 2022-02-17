@@ -13,7 +13,7 @@ use bevy_tileset::prelude::{TileId, TilesetParent, Tilesets};
 #[derive(Debug, Copy, Clone, Deserialize, Serialize)]
 pub struct SerializableTile {
 	pub id: TileId,
-	#[serde(with = "crate::TilePosRef")]
+	#[serde(with = "crate::coord::TilePosRef")]
 	pub pos: TilePos,
 }
 

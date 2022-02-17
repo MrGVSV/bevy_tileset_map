@@ -2,10 +2,10 @@ use bevy::prelude::*;
 use bevy_ecs_tilemap::{TilemapLabel, TilemapStage};
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash, StageLabel)]
-pub struct TilesetStage;
+pub struct TilesetMapStage;
 
 #[derive(SystemLabel, Clone, Debug, Hash, Eq, PartialEq)]
-pub enum TilesetLabel {
+pub enum TilesetMapLabel {
 	/// Labels the system that handles auto tile updates
 	UpdateAutoTiles,
 	/// Labels the system that handles auto tile removals
@@ -20,22 +20,22 @@ impl Plugin for TilesetMapPlugin {
 	fn build(&self, app: &mut App) {
 		app.add_stage_before(
 			TilemapStage,
-			TilesetStage,
+			TilesetMapStage,
 			SystemStage::parallel(),
 		);
 
 		#[cfg(feature = "auto-tile")]
 		app.add_event::<crate::auto::RemoveAutoTileEvent>()
 			.add_system_set_to_stage(
-				TilesetStage,
+				TilesetMapStage,
 				SystemSet::new().with_system(
-					crate::auto::on_remove_auto_tile.label(TilesetLabel::RemoveAutoTiles),
+					crate::auto::on_remove_auto_tile.label(TilesetMapLabel::RemoveAutoTiles),
 				),
 			)
 			.add_system_to_stage(
 				TilemapStage,
 				crate::auto::on_change_auto_tile
-					.label(TilesetLabel::UpdateAutoTiles)
+					.label(TilesetMapLabel::UpdateAutoTiles)
 					.before(TilemapLabel::UpdateChunkVisibility),
 			);
 	}

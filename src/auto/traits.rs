@@ -1,4 +1,4 @@
-use crate::TileCoord;
+use crate::coord::TileCoord;
 use bevy::math::IVec2;
 use bevy::prelude::{Entity, Query, With};
 use bevy_ecs_tilemap::{MapQuery, Tile, TileParent, TilePos};
