@@ -19,9 +19,14 @@ enum MapState {
 fn main() {
 	App::new()
 		// === Required === //
+		// Adds Bevy's default plugins
 		.add_plugins(DefaultPlugins)
+		// Adds the `bevy_ecs_tilemap` plugin
 		.add_plugin(TilemapPlugin)
-		.add_plugin(TilesetPlugin)
+		// Adds the `bevy_tileset` plugin
+		.add_plugin(TilesetPlugin::default())
+		// Adds this crate's plugn
+		.add_plugin(TilesetMapPlugin)
 		// /== Required === //
 		// === Exmaple-Specific === //
 		.add_startup_system(setup_hud)

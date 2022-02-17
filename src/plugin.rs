@@ -1,6 +1,5 @@
 use bevy::prelude::*;
 use bevy_ecs_tilemap::{TilemapLabel, TilemapStage};
-use bevy_tileset::prelude::TilesetPlugin as BasePlugin;
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash, StageLabel)]
 pub struct TilesetStage;
@@ -15,11 +14,11 @@ pub enum TilesetLabel {
 
 /// Plugin for setting up tilesets
 #[derive(Default)]
-pub struct TilesetPlugin;
+pub struct TilesetMapPlugin;
 
-impl Plugin for TilesetPlugin {
+impl Plugin for TilesetMapPlugin {
 	fn build(&self, app: &mut App) {
-		app.add_plugin(BasePlugin::default()).add_stage_before(
+		app.add_stage_before(
 			TilemapStage,
 			TilesetStage,
 			SystemStage::parallel(),
