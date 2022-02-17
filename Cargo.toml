@@ -1,10 +1,10 @@
 [package]
 name = "bevy_tileset_map"
-version = "0.3.0"
+version = "0.4.0"
 edition = "2021"
 authors = ["Gino Valente <gino.valente.code@gmail.com>"]
-description = "An extension to bevy_ecs_tilemap, allowing for configurable tilesets, auto tiling, and more"
-repository = "https://github.com/MrGVSV/bevy_tileset"
+description = "An extension to bevy_ecs_tilemap, allowing for configurable tilesets, auto tiling, and more using the bevy_tileset crate"
+repository = "https://github.com/MrGVSV/bevy_tileset_map"
 license = "MIT OR Apache-2.0"
 keywords = ["bevy", "tileset", "auto", "variant", "tile"]
 categories = ["game-development"]
@@ -12,9 +12,9 @@ readme = "README.md"
 exclude = ["assets/**/*", ".github/**/*", "screenshots/**/*"]
 
 [dependencies]
-bevy_tileset = { path = "..", version = "0.3" }
+bevy_tileset = { path = "../bevy_tileset", version = "^0.3.1" }
 bevy = { version = "0.6", default-features = false }
-bevy_ecs_tilemap = "0.5"
+bevy_ecs_tilemap = { version = "0.5", default-features = false }
 serde = { version = "1.0", optional = true }
 thiserror = "1.0"
 
@@ -23,8 +23,14 @@ serde_json = "1.0"
 
 [features]
 default = []
+
+# Enables Variant tiles
 variants = ["bevy_tileset/variants"]
+
+# Enables Auto tiles
 auto-tile = ["variants", "bevy_tileset/auto-tile"]
+
+# Enables tilemap serialization
 serialization = ["serde"]
 
 [[example]]
