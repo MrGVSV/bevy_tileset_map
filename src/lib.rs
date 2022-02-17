@@ -55,10 +55,10 @@
 //! * __`variants`__ - Enables usage of Variant tiles
 //! * __`auto-tile`__ - Enables usage of Auto tiles
 //! * __`serialization`__ - Enables tilemap serialization
-//! 
+//!
 
 #[cfg(feature = "auto-tile")]
-mod auto;
+pub(crate) mod auto;
 mod placement;
 mod plugin;
 #[cfg(feature = "serialization")]
