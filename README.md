@@ -1,6 +1,10 @@
 # bevy_tileset_map
 
-An implementation of  [`bevy_tileset`](https://github.com/MrGVSV/bevy_tileset) for
+[![crates.io](https://img.shields.io/crates/v/bevy_tileset_map?style=flat-square)](https://crates.io/crates/bevy_tileset_map)
+[![docs.rs](https://img.shields.io/docsrs/bevy_tileset_map?style=flat-square)](https://docs.rs/bevy_tileset_map)
+
+
+An implementation of [`bevy_tileset`](https://github.com/MrGVSV/bevy_tileset) for
 the [`bevy_ecs_tilemap`](https://github.com/StarArawn/bevy_ecs_tilemap) crate.
 
 <p align="center">
