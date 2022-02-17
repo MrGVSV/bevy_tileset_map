@@ -166,3 +166,9 @@ examples.
 | ---- | ------------------------ |
 | 0.6  | 0.4                     |
 | 0.5  | 0.2                      |
+
+## ℹ️ FAQ
+
+#### Why is this not just a feature on bevy_ecs_tilemap or bevy_tileset?
+
+The main reason for this is that those crates are meant to be generally used, whereas this one is meant to be more specific in usage: it's for those who want to use both crates together.
