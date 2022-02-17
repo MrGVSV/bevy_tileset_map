@@ -569,6 +569,7 @@ impl<'w, 's> TilePlacer<'w, 's> {
 	/// Attempts to handle the removal of an Auto Tile
 	///
 	/// Returns true if the tile was successfully removed
+	#[cfg(feature = "auto-tile")]
 	fn try_remove_auto_tile(&mut self, entity: Entity) -> bool {
 		// Create the remove event
 		let event = if let Ok((pos, parent, auto)) = self.auto_query.get(entity) {
