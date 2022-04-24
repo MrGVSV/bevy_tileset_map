@@ -61,20 +61,20 @@ pub use bevy_tileset as tileset;
 
 #[cfg(feature = "auto-tile")]
 pub(crate) mod auto;
+mod coord;
 mod placement;
 mod plugin;
 #[cfg(feature = "serialization")]
 mod serialization;
-mod coord;
 
 pub mod prelude {
-    pub use bevy_tileset::prelude::*;
+	pub use bevy_tileset::prelude::*;
 
-    #[cfg(feature = "auto-tile")]
-    pub use super::auto::RemoveAutoTileEvent;
-    pub use super::coord::TileCoord;
-    pub use super::placement::*;
-    pub use super::plugin::{TilesetMapLabel, TilesetMapPlugin, TilesetMapStage};
-    #[cfg(feature = "serialization")]
-    pub use super::serialization::*;
+	#[cfg(feature = "auto-tile")]
+	pub use super::auto::RemoveAutoTileEvent;
+	pub use super::coord::TileCoord;
+	pub use super::placement::*;
+	pub use super::plugin::{TilesetMapLabel, TilesetMapPlugin, TilesetMapStage};
+	#[cfg(feature = "serialization")]
+	pub use super::serialization::*;
 }

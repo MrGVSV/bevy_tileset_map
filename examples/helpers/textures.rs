@@ -14,7 +14,7 @@ pub fn set_texture_filters_to_nearest(
 						| TextureUsages::COPY_SRC
 						| TextureUsages::COPY_DST;
 				}
-			}
+			},
 			_ => (),
 		}
 	}

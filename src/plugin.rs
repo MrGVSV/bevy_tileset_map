@@ -18,11 +18,7 @@ pub struct TilesetMapPlugin;
 
 impl Plugin for TilesetMapPlugin {
 	fn build(&self, app: &mut App) {
-		app.add_stage_before(
-			TilemapStage,
-			TilesetMapStage,
-			SystemStage::parallel(),
-		);
+		app.add_stage_before(TilemapStage, TilesetMapStage, SystemStage::parallel());
 
 		#[cfg(feature = "auto-tile")]
 		app.add_event::<crate::auto::RemoveAutoTileEvent>()
