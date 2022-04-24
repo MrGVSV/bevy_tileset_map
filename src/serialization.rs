@@ -2,7 +2,7 @@
 
 use bevy::ecs::system::SystemParam;
 use bevy::prelude::Query;
-use bevy::utils::{AHashExt, HashMap};
+use bevy::utils::HashMap;
 use bevy_ecs_tilemap::{Tile, TileParent, TilePos};
 use serde::{Deserialize, Serialize};
 
