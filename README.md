@@ -33,10 +33,10 @@ with `bevy_ecs_tilemap`, but for now you can use it with git:
 
 ```toml
 [dependencies]
-bevy_tileset_map = "0.4"
+bevy_tileset_map = "0.5"
 
 # Don't forget to add `bevy_ecs_tilemap` to your project!
-bevy_ecs_tilemap = "0.5"
+bevy_ecs_tilemap = "0.6"
 ```
 
 ## ✨ Usage
@@ -163,9 +163,10 @@ examples.
 ## 🕊 Bevy Compatibility
 
 | bevy | bevy_tileset_map |
-| ---- | ------------------------ |
-| 0.6  | 0.4                     |
-| 0.5  | 0.2                      |
+|------|------------------|
+| 0.7  | 0.5              |
+| 0.6  | 0.4              |
+| 0.5  | 0.2              |
 
 ## ℹ️ FAQ
 
