@@ -8,7 +8,7 @@ An implementation of [`bevy_tileset`](https://github.com/MrGVSV/bevy_tileset) fo
 the [`bevy_ecs_tilemap`](https://github.com/StarArawn/bevy_ecs_tilemap) crate.
 
 <p align="center">
-	<img alt="Smart tile placement" src="https://github.com/MrGVSV/bevy_tileset_map/blob/main/screenshots/tile_placement_demo.gif" />
+	<img alt="Smart tile placement" src="https://raw.githubusercontent.com/MrGVSV/bevy_tileset_map/main/screenshots/tile_placement_demo.gif" />
 </p>
 
 
